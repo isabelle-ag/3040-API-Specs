@@ -1,7 +1,7 @@
 # 3040-API-Specs
 
 3040 Crypto
-### Endpoints
+### Endpoints (Isabelle)
 - transaction history/details
   - **Parameters:** Wallet ID, [date range]
 - wallet details
@@ -10,7 +10,7 @@
 - crypto transactions (0 parameters = today or give date)
   - **Parameters:** [Date], [cryptocurrency]
 
-### Resources (Isabelle)
+### Resources (Anmol)
 
 ### Description (Zander)
 
