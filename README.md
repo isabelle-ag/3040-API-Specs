@@ -18,7 +18,7 @@ Provides a list of cryptocurrencies held in the specified wallet and the wallet'
 
 `fiat` 
 > Accepts values like CAD, USD, AUD, etc.
-> Default: CAD
+> Default: CAD.
 
 #### Transaction History
 
