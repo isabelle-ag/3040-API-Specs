@@ -5,13 +5,13 @@ This API enables users and applications to access their 3040Crypto wallet data p
 
 ## Endpoints
 
-#### Wallet Details
+### Wallet Details
 
 `/wallet-details/<wallet_id>[?crypto=<crypto_symbol>&fiat=<currency_code>]`
 
 Provides a list of cryptocurrencies held in the specified wallet and the wallet's total value in a given fiat currency. Optionally, you can filter the response by cryptocurrency by including the `crypto` query parameter. If the `fiat` parameter is not specified, the default fiat currency is CAD. 
 
-*Query Parameters*
+**Query Parameters**
 
 `crypto` 
 > Accepts values like BTC, ETH, DOGE, etc.
@@ -20,26 +20,26 @@ Provides a list of cryptocurrencies held in the specified wallet and the wallet'
 > Accepts values like CAD, USD, AUD, etc.
 > Default: CAD.
 
-#### Transaction History
+### Transaction History
 
 `/transaction-history/<wallet_id>[?date_range=<yyyy-mm-dd,yyyy-mm-dd>]`
 
 Given a wallet ID, returns recent transactions in reverse chronological order. Optionally, use the `date_range` query parameter to filter the results by specifying a date range; it will return all transactions of that wallet within the specified date range, including the first and last date.
 
-*Query Parameters*
+**Query Parameters**
 
 `date_range`
 > Accepts date range in the format YYYY-MM-DD,YYYY-MM-DD.
 > The order doesn't matter.
 
 
-## Global Transactions
+### Global Transactions
 
 `/global-transactions[?date=<YYYY-MM-DD>&crypto=<crypto_symbol>]`
 
 Return all cryptocurrency transactions that have occured on a given day. Optionally, use the query parameters `date` and `crypto` to filter the results. If no `date` parameter is provided, the default is the current date.
 
-*Query Parameters*
+**Query Parameters**
 
 `date`
 > Accepts date in the format YYYY-MM-DD.
