@@ -1,7 +1,7 @@
 # 3040Crypto Wallet Management API
 
 ## Description
-This API enables users and applications to access their 3040Crypto wallet data programmatically. It includes the wallet's total value in a given fiat currency, personal transcation history, and global transaction history.
+This API enables users and applications to access their 3040Crypto wallet data programmatically. It includes the wallet's total value in a given fiat currency, personal transaction history, and global transaction history.
 
 ## Endpoints
 
@@ -37,7 +37,7 @@ Given a wallet ID, returns recent transactions in reverse chronological order. O
 
 `/global-transactions[?date=<YYYY-MM-DD>&crypto=<crypto_symbol>]`
 
-Return all cryptocurrency transactions that have occured on a given day. Optionally, use the query parameters `date` and `crypto` to filter the results. If no `date` parameter is provided, the default is the current date.
+Return all cryptocurrency transactions that have occurred on a given day. Optionally, use the query parameters `date` and `crypto` to filter the results. If no `date` parameter is provided, the default is the current date.
 
 **Query Parameters**
 
