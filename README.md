@@ -1,7 +1,7 @@
 # 3040Crypto Wallet Management API
 
-## Description
-This API enables users and applications to access their 3040Crypto wallet data programmatically. It includes the wallet's total value in a given fiat currency, personal transaction history, and global transaction history.
+## Description (Zander)
+
 
 ## Endpoints
 
@@ -32,7 +32,6 @@ Given a wallet ID, returns recent transactions in reverse chronological order. O
 > Accepts date range in the format YYYY-MM-DD,YYYY-MM-DD.
 > The order doesn't matter.
 
-
 ### Global Transactions
 
 `/global-transactions[?date=<YYYY-MM-DD>&crypto=<crypto_symbol>]`
@@ -50,9 +49,7 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 
 ## Resources (Anmol)
 
-## Description (Zander)
-
-## Sample Request & Sample Response
+## Sample Request & Response
 
 Request for the [transaction history](#transaction-history) given the wallet ID and a date range.
 
