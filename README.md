@@ -54,30 +54,17 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 
 ```json
 {
-  "wallet_id": "123456",
+  "wallet_id": integer, // User's wallet ID
   "cryptocurrencies": [
     {
-      "symbol": "BTC",
-      "amount": 1.5,
-      "value": 75000.00,
-      "fiat_currency": "CAD"
-    },
-    {
-      "symbol": "ETH",
-      "amount": 20.0,
-      "value": 35000.00,
-      "fiat_currency": "CAD"
-    },
-    {
-      "symbol": "DOGE",
-      "amount": 50000.0,
-      "value": 15000.00,
-      "fiat_currency": "CAD"
+      "symbol": string, // Cryptocurrency symbol
+      "amount": float, // Amount of this cryptocurrency owned by this wallet
+      "fiat_currency": string, // Symbol of fiat currency
+      "value": float // Total value of this cryptocurrency in the specified fiat currency
     }
-  ],
-  "total_value": 125000.00,
-  "total_value_fiat_currency": "CAD"
+  ]
 }
+
 ```
 
 ### Global Transactions
@@ -86,20 +73,12 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 {
   "transactions": [
     {
-      "transaction_id": "txn_123",
-      "timestamp": "2024-03-18T08:32:15Z",
-      "amount": 0.5,
-      "currency": "BTC",
-      "type": "deposit",
-      "status": "completed"
-    },
-    {
-      "transaction_id": "txn_124",
-      "timestamp": "2024-03-17T14:20:00Z",
-      "amount": 25.0,
-      "currency": "ETH",
-      "type": "withdrawal",
-      "status": "completed"
+      "transaction_id": string, // Unique identifier for the transaction
+      "timestamp": string, // Timestamp of the transaction in ISO 8601 format
+      "amount": float, // Amount of cryptocurrency involved in the transaction
+      "currency": string, // Cryptocurrency symbol
+      "type": string, // Type of transaction (deposit, withdrawal)
+      "status": string // Status of the transaction (completed, pending)
     }
   ]
 }
