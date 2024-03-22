@@ -1,10 +1,8 @@
 <h1 style="text-align:left; font-size: 50px;"><strong>3040Crypto Wallet Management API</strong></h1>
 
-## Description (Zander)
+# Description
 
 The 3040Crypto wallet Management API is an accessible API, designed to be used by anyone who has a wallet with 3040Crypto or who has an interest in the transactions that run through it. The two main features are wallet breakdown, which displays the amount and value of the coins a user holds, and transaction history, which will either display the transaction log for one user or for the userbase of 3040Crypto as a whole.
-
-## Endpoints
 
 # Endpoints
 ---
