@@ -111,7 +111,7 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 
 Request for the [transaction history](#transaction-history) given the wallet ID and a date range.
 
-```html
+```javascript
 Request: GET /transaction-history/123456?date_range=2024-01-01,2024-03-20 HTTP/1.1
 Host: api.3040crypto.com
 ```
