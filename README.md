@@ -36,7 +36,7 @@ The 3040Crypto wallet Management API is an accessible API, designed to be used b
 > Accepts date range in the format YYYY-MM-DD,YYYY-MM-DD.
 > The order doesn't matter.
 
-### Global Transactions
+### Transactions
 
 `/global-transactions[?date=<YYYY-MM-DD>&crypto=<crypto_symbol>]`
 
