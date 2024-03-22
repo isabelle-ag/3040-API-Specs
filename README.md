@@ -1,4 +1,4 @@
-# 3040Crypto Wallet Management API
+<h1 style="text-align:left; font-size: 50px;"><strong>3040Crypto Wallet Management API</strong></h1>
 
 # Description (Zander)
 ---
