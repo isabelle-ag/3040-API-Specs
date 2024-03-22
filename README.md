@@ -1,4 +1,4 @@
-# 3040Crypto Wallet Management API
+<h1 style="text-align:left; font-size: 50px;"><strong>3040Crypto Wallet Management API</strong></h1>
 
 ## Description (Zander)
 
@@ -6,6 +6,8 @@ The 3040Crypto wallet Management API is an accessible API, designed to be used b
 
 ## Endpoints
 
+# Endpoints
+---
 ### Wallet Details
 
 `/wallet-details/<wallet_id>[?crypto=<crypto_symbol>&fiat=<currency_code>]`
@@ -48,13 +50,50 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 `crypto` 
 > Accepts values like BTC, ETH, DOGE, etc.
 
-## Resources (Anmol)
+# Resources
+---
 
-## Sample Request & Response
+### Wallet
+
+```json
+{
+  "wallet_id": integer, // User's wallet ID
+  "cryptocurrencies": [
+    {
+      "symbol": string, // Cryptocurrency symbol
+      "amount": float, // Amount of this cryptocurrency owned by this wallet
+      "fiat_currency": string, // Symbol of fiat currency
+      "value": float // Total value of this cryptocurrency in the specified fiat currency
+    }
+  ]
+}
+
+```
+
+### Global Transactions
+
+```json
+{
+  "transactions": [
+    {
+      "transaction_id": string, // Unique identifier for the transaction
+      "timestamp": string, // Timestamp of the transaction in ISO 8601 format
+      "amount": float, // Amount of cryptocurrency involved in the transaction
+      "currency": string, // Cryptocurrency symbol
+      "type": string, // Type of transaction (deposit, withdrawal)
+      "status": string // Status of the transaction (completed, pending)
+    }
+  ]
+}
+
+```
+
+# Sample Request & Response
+---
 
 Request for the [transaction history](#transaction-history) given the wallet ID and a date range.
 
-```html
+```javascript
 Request: GET /transaction-history/123456?date_range=2024-01-01,2024-03-20 HTTP/1.1
 Host: api.3040crypto.com
 ```
