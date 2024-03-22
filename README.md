@@ -1,10 +1,10 @@
 # 3040Crypto Wallet Management API
 
-## Description (Zander)
+# Description (Zander)
+---
 
-
-## Endpoints
-
+# Endpoints
+---
 ### Wallet Details
 
 `/wallet-details/<wallet_id>[?crypto=<crypto_symbol>&fiat=<currency_code>]`
@@ -47,9 +47,10 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 `crypto` 
 > Accepts values like BTC, ETH, DOGE, etc.
 
-## Resources
+# Resources
+---
 
-##### Wallet Object
+### Wallet
 
 ```json
 {
@@ -79,7 +80,7 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 }
 ```
 
-##### Global Transaction
+### Global Transactions
 
 ```json
 {
@@ -105,7 +106,8 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 
 ```
 
-## Sample Request & Response
+# Sample Request & Response
+---
 
 Request for the [transaction history](#transaction-history) given the wallet ID and a date range.
 
