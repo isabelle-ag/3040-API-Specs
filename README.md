@@ -47,7 +47,63 @@ Return all cryptocurrency transactions that have occurred on a given day. Option
 `crypto` 
 > Accepts values like BTC, ETH, DOGE, etc.
 
-## Resources (Anmol)
+## Resources
+
+##### Wallet Object
+
+```json
+{
+  "wallet_id": "123456",
+  "cryptocurrencies": [
+    {
+      "symbol": "BTC",
+      "amount": 1.5,
+      "value": 75000.00,
+      "fiat_currency": "CAD"
+    },
+    {
+      "symbol": "ETH",
+      "amount": 20.0,
+      "value": 35000.00,
+      "fiat_currency": "CAD"
+    },
+    {
+      "symbol": "DOGE",
+      "amount": 50000.0,
+      "value": 15000.00,
+      "fiat_currency": "CAD"
+    }
+  ],
+  "total_value": 125000.00,
+  "total_value_fiat_currency": "CAD"
+}
+```
+
+##### Global Transaction
+
+```json
+{
+  "transactions": [
+    {
+      "transaction_id": "txn_123",
+      "timestamp": "2024-03-18T08:32:15Z",
+      "amount": 0.5,
+      "currency": "BTC",
+      "type": "deposit",
+      "status": "completed"
+    },
+    {
+      "transaction_id": "txn_124",
+      "timestamp": "2024-03-17T14:20:00Z",
+      "amount": 25.0,
+      "currency": "ETH",
+      "type": "withdrawal",
+      "status": "completed"
+    }
+  ]
+}
+
+```
 
 ## Sample Request & Response
 
