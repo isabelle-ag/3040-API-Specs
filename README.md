@@ -9,26 +9,28 @@ The 3040Crypto wallet Management API is an accessible API, designed to be used b
 ---
 ### Wallet Details
 
-`/wallet-details/<wallet_id>[?crypto=<crypto_symbol>&fiat=<currency_code>]`
+`/wallet-details/<wallet_id>[?fiat=<currency_code>&crypto=<crypto_symbol>]`
 
-Provides a list of cryptocurrencies held in the specified wallet and the wallet's total value in a given fiat currency. Optionally, you can filter the response by cryptocurrency by including the `crypto` query parameter. If the `fiat` parameter is not specified, the default fiat currency is CAD. 
+`GET` Provides a list of cryptocurrencies held in the specified wallet alongside the wallet's total value in a given fiat currency. If the `fiat` parameter is omitted, it defaults to the user's fiat currency. Optionally, you can refine the response by filtering it with the `crypto` query string parameter.
 
-**Query Parameters**
+`PUT` Updates the users default fiat currency.
 
-`crypto` 
-> Accepts values like BTC, ETH, DOGE, etc.
+**Query String Parameters**
 
 `fiat` 
 > Accepts values like CAD, USD, AUD, etc.
 > Default: CAD.
 
+`crypto` 
+> Accepts values like BTC, ETH, DOGE, etc.
+
 ### Transaction History
 
 `/transaction-history/<wallet_id>[?date_range=<yyyy-mm-dd,yyyy-mm-dd>]`
 
-Given a wallet ID, returns recent transactions in reverse chronological order. Optionally, use the `date_range` query parameter to filter the results by specifying a date range; it will return all transactions of that wallet within the specified date range, including the first and last date.
+`GET` Given a wallet ID, returns recent transactions in reverse chronological order. Optionally, use the `date_range` query string parameter to filter the results by specifying a date range; it will return all transactions of that wallet within the specified date range, including the first and last date.
 
-**Query Parameters**
+**Query String Parameters**
 
 `date_range`
 > Accepts date range in the format YYYY-MM-DD,YYYY-MM-DD.
@@ -38,9 +40,9 @@ Given a wallet ID, returns recent transactions in reverse chronological order. O
 
 `/global-transactions[?date=<YYYY-MM-DD>&crypto=<crypto_symbol>]`
 
-Return all cryptocurrency transactions that have occurred on a given day. Optionally, use the query parameters `date` and `crypto` to filter the results. If no `date` parameter is provided, the default is the current date.
+`GET` Return all cryptocurrency transactions that have occurred on a given day. Optionally, use the query string parameters `date` and `crypto` to filter the results. If no `date` parameter is provided, the default is the current date.
 
-**Query Parameters**
+**Query String Parameters**
 
 `date`
 > Accepts date in the format YYYY-MM-DD.
